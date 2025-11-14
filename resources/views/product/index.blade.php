@@ -1,3 +1,7 @@
+<!-- 
+    Index.blade.php & Welcome.blade.php inseriti in cartella product come visto a lezione
+-->
+
 <x-layout>
     
     <div class="container mt-4">

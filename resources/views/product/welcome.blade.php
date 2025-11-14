@@ -16,7 +16,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">Prezzo del prodotto in EUR;</label>
-                            <input name="price" type="text" class="form-control" id="name">
+                            <input name="price" type="number" class="form-control" id="name">
                         </div>                    
                         <button type="submit" class="btn btn-light w-100 mt-3 d-flex align-items-center justify-content-center">
                             Aggiungi allo shop

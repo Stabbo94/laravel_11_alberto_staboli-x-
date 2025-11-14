@@ -6,11 +6,11 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
-class ProductController extends Controller
-{
-    //
-    
-    public function store(Request $request){
+// Controller riorganizzato come visto a lezione
+
+class ProductController extends Controller{    
+    public function store(Request $request)
+    {
         $name = $request->name;
         $description = $request->description;
         $price = $request->price;
@@ -21,13 +21,13 @@ class ProductController extends Controller
         $product->description = $description;
         $product->price = $price;
         
-        
         $product->save();
-
+        
         return redirect(route('home'));
-    }
-
-    public function Index(){
+    }    
+    
+    public function Index()
+    {
         $products = Product::all();
         return view('product.index', ['products' => $products]);
     }
