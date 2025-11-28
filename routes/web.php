@@ -3,13 +3,13 @@
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [ProductController::class, 'create'])->name('home');
+Route::view('/', 'welcome')->name('home');
 
-// inserisci products
+// Inserisci products
 Route::post('/product/store', [ProductController::class, 'store'])->name('product.store');
 
-// prodotti creati
+// Prodotti creati
 Route::get('/product/index', [ProductController::class, 'index'])->name('product.index');
 
-// form per inserimento
+// Form per inserimento
 Route::get('/product/form', [ProductController::class, 'form'])->name('product.form');

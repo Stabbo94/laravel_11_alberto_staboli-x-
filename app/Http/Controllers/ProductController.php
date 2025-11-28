@@ -1,7 +1,5 @@
 <?php
 
-// ho inserito i cambiamenti indicati  (update controller e metodi, rimossa CDN Bootstrap, vista welcome spostata, rotta aggiornata in web.php e utilizzo controller, aggiornamento dati memorizzazione prodotto) nel primo e nel secondo commento, ripropongo il selfwork per vs correzione sperando che sia corretto, e in caso di ulteriori errori riprenoto Q&A, grazie mille del supporto e del prezioso feedback :) - Alberto!
-
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductRequest;
@@ -12,7 +10,7 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('index');
+        $this->middleware('auth')->only('index', 'form');
     }
     
     // lista dei products
@@ -28,11 +26,6 @@ class ProductController extends Controller
     }
     
     
-    // form per aggiunta a shop
-    public function create()
-    {
-        return view('welcome'); 
-    }
     
     // salvataggio nuovo prodotto
     public function store(ProductRequest $request)
