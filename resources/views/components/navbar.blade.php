@@ -15,6 +15,12 @@
         <li class="nav-item">
           <a class="nav-link" href="{{route('product.form')}}">Inserisci prodotto</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('article.create')}}">Pubblica articolo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('article.index')}}">Articoli pubblicati</a>
+        </li>
         <li class="nav-item dropdown">
           @auth
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
