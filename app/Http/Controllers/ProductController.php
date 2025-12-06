@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->only('index', 'form');
+        $this->middleware('auth')->only('index', 'create');
     }
     
     // lista dei products
@@ -20,9 +20,9 @@ class ProductController extends Controller
         return view('product.index', compact('products'));
     }
     
-    public function form()
+    public function create()
     {
-        return view('product.form');
+        return view('product.create');
     }
     
     
@@ -39,6 +39,6 @@ class ProductController extends Controller
         
         
         
-        return redirect()->route('home');
+        return redirect()->route('product.index')->with('alert', 'Inserimento effettuato correttamente!');;
     }
 }

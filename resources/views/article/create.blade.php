@@ -44,7 +44,7 @@
                             <label for="img" class="form-label">Aggiungi immagine;</label>
                             <input name="img" type="file" class="form-control" id="img">
                         </div>             
-                        <button type="submit" class="btn btn-light w-100 mt-4 d-flex align-items-center justify-content-center">
+                        <button type="submit" class="btn btn-light w-100 mt-5 d-flex align-items-center justify-content-center">
                             Pubblica articolo
                         </button>
                         

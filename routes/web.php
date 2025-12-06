@@ -13,7 +13,7 @@ Route::post('/product/store', [ProductController::class, 'store'])->name('produc
 Route::get('/product/index', [ProductController::class, 'index'])->name('product.index');
 
 // Form per inserimento
-Route::get('/product/form', [ProductController::class, 'form'])->name('product.form');
+Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
 
 // Article Controller
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create')->middleware('auth');

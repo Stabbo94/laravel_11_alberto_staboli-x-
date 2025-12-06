@@ -1,42 +1,174 @@
-.card{
+.card
+{
     width: 20rem;
 }
 
-
-.midsection{
-    min-height: 800px;
+.service-box
+{
+    border: 1px solid #DEE2E6;
+    border-radius: 0.5rem;
+    padding: 1rem;
 }
 
 
+/* Navbar */
+.nav-link
+{
+    text-decoration: none;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    border: solid 1px #A6A6A6;
+}
 
-footer {
-    margin-top: 50px;           
+.nav-link::before
+{
+    content: "";
+    position: absolute;
+    background: #A6A6A6;
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-link:hover
+{
+    color: #000;
+    z-index: 1;
+}
+
+.nav-link:hover::before
+{
+    width: 100%;
+}
+/* Fine Navbar */
+
+/* Parte Slider & Animazioni */
+.midsection
+{
+    min-height: 800px;
+    width: 100%;
+    height: 300px;
+}
+
+.bg-cover
+{
+    background-image: 
+    linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    url('https://cdn.pixabay.com/photo/2020/05/25/17/03/merry-christmas-5219496_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 95px;
+}
+
+.elements{
+    margin-bottom: 95px;
+}
+
+.mid-text
+{
+    position: relative;
+    font-size: 2.7rem;
+    font-weight: bold;
+    text-align: center;
+    color: transparent;
+    background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop'); 
+    background-size: 200%;
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background
+{
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.littletitle
+{
+    position: relative;
+    font-size: 2.7rem;
+    font-weight: bold;
+    text-align: center;
+    color: transparent;
+    background-image:
+    linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+    url('https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop'); 
+    background-size: 200%;
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background
+{
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.country-icon
+{
+    width: 60px;
+    height: 60px;
+}
+
+#image-slider .splide__arrows
+{
+    bottom: 10px;
+    top: auto;
+}
+
+#image-slider .splide__slide,
+#countries-slider .splide__slide {
+    cursor: pointer;
+}
+/* Fine Parte Slider & Animazioni */
+
+/* Footer */
+footer
+{
+    height: 50px;           
     background-color: rgb(0, 21, 78);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 15px 10px;
+    padding: 0px;
     width: 100%;
     flex-shrink: 0;
     box-sizing: border-box;
     word-wrap: break-word;
 }
 
-form{
+.footertext
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: smaller;
+}
+/* Fine Footer */
+
+form
+{
     margin-top: 25px;
     margin-bottom: 700px;
-}
-
-.midsection {
-    width: 100%;
-    height: 300px;
-}
-
-.bg-cover {
-    background-image: url('https://cdn.pixabay.com/photo/2014/08/02/11/40/high-bay-408222_1280.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
